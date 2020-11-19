@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/header/header";
+import ParentCabinet from "./components/parent/parent-cabinet.component";
 
 const routes = [
   {
@@ -9,11 +10,11 @@ const routes = [
   },
   {
     path: "parent-page",
-    component: () => <h1>Parent</h1>,
+    component: ParentCabinet,
   },
   {
     path: "*",
-    component: () => <h1>Parent</h1>,
+    component: ParentCabinet,
   }
 ];
 
