@@ -1,0 +1,67 @@
+.child-box {
+    cursor: pointer;
+  width: 600px;
+  height: 336px;
+  background: #15384c;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 5px 15px 10px 0;
+
+  &__top,
+  &__bottom {
+    display: flex;
+  }
+
+  &__top {
+    padding: 10px 10px 10px 0;
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+      .text {
+          margin: 10px 5px 10px 0;
+      }
+  }
+
+  &__title {
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__avatar-img {
+      margin-right: 30px;
+  }
+
+  &__film {
+    display: flex;
+    &-img {
+      width: 101px;
+      height: 149px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+  }
+}
+
+.text {
+  color: #fff;
+  margin-right: 5px;
+
+  &--secondary {
+    color: #8cb4cb;
+  }
+
+  &--field {
+      margin-right: 20px;
+  }
+
+  &--percent {
+      color: #2EAB85;
+      margin-right: 15px;
+  }
+
+  &--big {
+    font-size: 18px;
+  }
+}
