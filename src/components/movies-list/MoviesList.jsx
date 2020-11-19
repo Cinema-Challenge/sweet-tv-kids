@@ -1,16 +1,15 @@
 import React from "react";
-// import Character from '../../components/character/Character';
-// import { Button } from '../../styled-components/Button';
-import { Block } from '../../../styled-components/Block';
-import { Title } from '../../../styled-components/Headline';
+import { FlexBlock } from '../../styled-components/FlexBlock';
+import { Title } from '../../styled-components/Headline';
+import MovieItem from './movie-item/MovieItem';
 
 const MoviesList = ({title, items}) => (
-    <Block direction="column" justify="center">
+    <FlexBlock direction="column" justify="center">
         <Title>{title}</Title>
-        <ul>
-            {items.map(item => <li key={title}>{item}</li>)}
-        </ul>
-    </Block>
+        <FlexBlock>
+            {items.map(movie => <MovieItem key={movie.title+movie.desc} {...movie} />)}
+        </FlexBlock>
+    </FlexBlock>
 )
 
 export default MoviesList;
