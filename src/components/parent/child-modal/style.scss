@@ -1,0 +1,53 @@
+.add-child-modal {
+  &__text {
+    text-align: center;
+  }
+}
+
+.child-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+
+  &__avatar {
+    width: 257px;
+    height: 257px;
+    flex: 2;
+    object-fit: contain;
+    margin-right: 50px;
+  }
+
+  &__form {
+    flex: 3;
+
+    .text {
+      margin: 10px 0;
+      display: block;
+    }
+  }
+}
+
+.custom_drop {
+  background-color: rgba(196, 196, 196, 0.3);
+  border-radius: 7px;
+  padding: 6px 5px 6px 10px;
+  border: 0;
+  color: white;
+  outline: none;
+  border: 1.5px solid transparent;
+  margin-top: 0;
+  width: 344px;
+  height: 32px;
+
+  background: #4a6370;
+  border-radius: 5px;
+}
+
+.input-field {
+  display: block;
+  background: #4a6370;
+  border-radius: 5px;
+  width: 344px;
+  height: 32px;
+}
