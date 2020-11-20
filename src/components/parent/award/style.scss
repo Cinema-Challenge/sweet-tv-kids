@@ -1,0 +1,46 @@
+.award-box {
+    width: 300px;
+    height: 370px;
+    background-color: #15384C;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 15px;
+    border-radius: 15px;
+    padding: 10px 10px 25px 10px;
+    text-align: center;
+
+    &__icon-small, &__date {
+        position: absolute;
+        top: 10px;
+    }
+
+    &__icon-small {
+        left: 10px;
+    }
+
+    &__date, &__icon-share {
+        right: 5px;
+    }
+
+    &__icon-share {
+        position: absolute;
+        bottom: 105px;
+    }
+
+    &__icon {
+        width: 220px;
+        object-fit: contain;
+        margin: 35px 0 10px 0;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}
+
+.awards {
+    display: flex;
+}
