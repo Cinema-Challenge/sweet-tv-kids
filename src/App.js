@@ -1,12 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/header/header";
+import ParentsApp from './pages/parents-app/ParentsApp';
+import KidsApp from './pages/kids-app/KidsApp';
+import Footer from './components/footer/Footer';
 import ParentCabinet from "./components/parent/parent-cabinet.component";
 
 const routes = [
   {
-    path: "children-page",
-    component: () => <h1>Children</h1>,
+    path: "/kids",
+    component: () => <KidsApp />,
   },
   {
     path: "parent-page",
@@ -32,6 +35,7 @@ function App() {
             />
           ))}
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
