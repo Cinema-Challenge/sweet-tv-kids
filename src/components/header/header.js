@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ChevronDownIcon, MoonIcon, ProfileIcon, SearchIcon } from "../icons";
 import { headerLinks } from './header.constants';
 import "./style.scss";
@@ -24,7 +25,7 @@ const Header = () => {
                 <li className="navigation__link"><SearchIcon /></li>
                 <li className="navigation__link"><MoonIcon /></li>
                 <li className="navigation__link">UK <ChevronDownIcon /></li>
-                <li className="navigation__link"><ProfileIcon /> Кабінет</li>
+                <Link to="/profile" className="navigation__link"><ProfileIcon /> Кабінет</Link>
           </ul>
         </nav>
       </div>

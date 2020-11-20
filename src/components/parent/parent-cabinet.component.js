@@ -9,7 +9,7 @@ const ParentCabinet = () => {
   return (
     <main className="parent__container">
       <h1 className="title">Управління особистими даними</h1>
-      <Tabs>
+      <Tabs defaultIndex={5}>
         <TabList className="tab-list">
           {tabListData.map(({ title, subtitle, icon }) => (
             <Tab className="tab-list__item" key={title}>
