@@ -12,5 +12,5 @@ export const Block = styled.div`
 `;
 
 export const MediumBlock = styled(Block)`
-    width: 42%;
+    width: 44%;
 `;

@@ -6,9 +6,14 @@ import imageSrc from './img/donut.png';
 const BtnDonut = styled(Button)`
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8px;
 
     span {
         margin-right: 5px;
+    }
+
+    &:hover span {
+        color: #fff;
     }
 `;
 
@@ -20,9 +25,15 @@ const ImgBlock = styled.div`
     }
 `;
 
-const ButtonDonut = ({text}) => (
+const DonutsAmount = styled.span`
+    color: #2EBEC5;
+    margin-left: 8px;
+`;
+
+const ButtonDonut = ({text, donuts}) => (
     <BtnDonut>
         <span>{text}</span>
+        <DonutsAmount>{donuts}</DonutsAmount>
         <ImgBlock>
             <img src={imageSrc} alt='donut' />
         </ImgBlock>

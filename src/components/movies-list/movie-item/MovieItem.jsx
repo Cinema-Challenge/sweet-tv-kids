@@ -22,7 +22,7 @@ const Desc = styled.p`
 `;
 
 const ImageContainer = styled.div`
-    height: 180px;
+    height: 250px;
     border: 2px solid transparent;
     border-radius: 10px;
     overflow: hidden;
