@@ -4,7 +4,7 @@ import Header from "./components/header/header";
 import ParentsApp from './pages/parents-app/ParentsApp';
 import KidsApp from './pages/kids-app/KidsApp';
 import Footer from './components/footer/Footer';
-
+import ParentCabinet from "./components/parent/parent-cabinet.component";
 
 const routes = [
   {
@@ -12,12 +12,12 @@ const routes = [
     component: () => <KidsApp />,
   },
   {
-    path: "/parents",
-    component: () => <ParentsApp />,
+    path: "parent-page",
+    component: ParentCabinet,
   },
   {
     path: "*",
-    component: () => <h1>Parent</h1>,
+    component: ParentCabinet,
   }
 ];
 
@@ -26,7 +26,6 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         <Header />
-        {/* <KidsApp /> */}
         <Switch>
           {routes.map((route) => (
             <Route
