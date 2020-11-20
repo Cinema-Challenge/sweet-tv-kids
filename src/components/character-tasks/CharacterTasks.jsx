@@ -4,6 +4,7 @@ import ButtonDonut from '../button-donut/ButtonDonut';
 import { FlexBlock } from '../../styled-components/FlexBlock';
 import { Headline } from '../../styled-components/Headline';
 import { BlueButton } from '../../styled-components/Button';
+import DonutsAmount from '../../components/donuts-amount/DonutsAmount';
 
 
 const CharacterBlock = styled(FlexBlock)`
@@ -33,7 +34,11 @@ const SecondButtonsBlock = styled(FlexBlock)`
 
 const CharacterTasks = () => (
     <CharacterBlock>
-        <Headline>Артем</Headline>
+        <FlexBlock>
+            <Headline>Артем</Headline>
+            <DonutsAmount donuts="300" />
+        </FlexBlock>
+        
         <ButtonsBlock>
             <ButtonDonut text="Змінити фон" donuts="200" />
             <ButtonDonut text="Нова рамка" donuts="200" />
