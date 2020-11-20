@@ -12,7 +12,7 @@ const routes = [
     component: () => <KidsApp />,
   },
   {
-    path: "parent-page",
+    path: "/profile",
     component: ParentCabinet,
   },
   {

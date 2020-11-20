@@ -47,8 +47,6 @@ const Children = () => {
     if (data) setChildren([...children, JSON.parse(data)])
   }, [])
 
-  console.log(children);
-
   return (
     <>
       <div className="children">
