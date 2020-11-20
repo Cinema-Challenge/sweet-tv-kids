@@ -109,13 +109,13 @@ const KidsApp = () => (
             <CharacterTasks />
         </CharacterBlock>
 
-        <FlexBlock>
+        <FlexBlock padding="8px 0">
             <UpdateCharacter />
             <FeaturesList />
         </FlexBlock>
 
-        <FlexBlock>
-            <ChallengeList title="Загальні Challenges" items={mainChallenges} />
+        <FlexBlock padding="8px 0">
+            <ChallengeList title="Загальні Challenges" items={mainChallenges} align="24px" />
             <ChallengeList title="Щоденні Challenges" items={dailyChallenges} />
         </FlexBlock>
 

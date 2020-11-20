@@ -1,16 +1,14 @@
 import React from "react";
-// import Character from '../../components/character/Character';
-// import { Button } from '../../styled-components/Button';
-import { MediumBlock } from '../../../styled-components/Block';
+import { Block } from '../../../styled-components/Block';
 import { Title } from '../../../styled-components/Headline';
 
-const ChallengeList = ({title, items}) => (
-    <MediumBlock direction="column">
+const ChallengeList = ({title, items, align}) => (
+    <Block direction="column" align="center" marginRight={align}>
         <Title>{title}</Title>
         <ul>
             {items.map(item => <li>{item}</li>)}
         </ul>
-    </MediumBlock>
+    </Block>
 )
 
 export default ChallengeList;
