@@ -10,3 +10,7 @@ export const Block = styled.div`
     margin-bottom: 15px;
     color: #fff;
 `;
+
+export const MediumBlock = styled(Block)`
+    width: 42%;
+`;
