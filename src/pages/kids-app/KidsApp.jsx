@@ -6,6 +6,8 @@ import MoviesList from '../../components/movies-list/MoviesList';
 import { Container } from '../../styled-components/Container';
 import CharacterTasks from '../../components/character-tasks/CharacterTasks';
 import styled from 'styled-components';
+import FeaturesList from '../../components/features-history/FeatutesHistory';
+import UpdateCharacter from '../../components/update-character/UpdateCharacter';
 
 const mainChallenges = [
     'Поліглот',
@@ -108,9 +110,16 @@ const KidsApp = () => (
         </CharacterBlock>
 
         <FlexBlock>
+            <UpdateCharacter />
+            <FeaturesList />
+        </FlexBlock>
+
+        <FlexBlock>
             <ChallengeList title="Загальні Challenges" items={mainChallenges} />
             <ChallengeList title="Щоденні Challenges" items={dailyChallenges} />
         </FlexBlock>
+
+
 
         {moviesListData.map(list => <MoviesList title={list.title} items={list.items} />)}
         
