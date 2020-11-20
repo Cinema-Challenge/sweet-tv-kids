@@ -7,7 +7,7 @@ export const Block = styled.div`
     flex-direction: ${props => (props.direction || 'row')};
     align-item: ${props => (props.align || 'flex-start')};
     flex-grow: ${props => (props.grow || '1')};
-    padding: 16px;
+    padding: 24px;
     margin-bottom: 15px;
     margin-right: ${props => (props.marginRight || '')};
     background: #15394C;

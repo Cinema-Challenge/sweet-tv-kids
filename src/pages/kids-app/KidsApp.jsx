@@ -10,18 +10,49 @@ import FeaturesList from '../../components/features-history/FeatutesHistory';
 import UpdateCharacter from '../../components/update-character/UpdateCharacter';
 
 const mainChallenges = [
-    'Поліглот',
-    'Мандрівник',
-    'Поліглот',
-    'Поліглот',
-    'Поліглот'
+    {
+        title: 'Поліглот',
+        desc: 'Переглянути 5 стрічок англ мовою',
+        donutsAmount: '200'
+    },
+    {
+        title: 'В десятку',
+        desc: 'Пройти 10 тестів після перегляду стрічки',
+        donutsAmount: '300'
+    },
+    {
+        title: 'Разом веселіше',
+        desc: 'Запросити друга на сайт',
+        donutsAmount: '50'
+    },
+    {
+        title: 'Популярність',
+        desc: 'Розмістити посилання на свого героя в соцмережі',
+        donutsAmount: '100'
+    }
 ];
 
 const dailyChallenges = [
-    'Переглянути стрічку французською',
-    'Переглянути стрічку французською',
-    'Переглянути стрічку французською',
-    'Переглянути стрічку французською',
+    {
+        title: 'Переглянути стрічку французською',
+        donutsAmount: '100'
+    },
+    {
+        title: 'Історія: стрічка “Стів Джобс”',
+        donutsAmount: '80'
+    },
+    {
+        title: 'Зробити домашнє завдання!',
+        donutsAmount: '50'
+    },
+    {
+        title: 'Зробити зарядку',
+        donutsAmount: '200'
+    },
+    {
+        title: 'Переглянути стрічку англійською',
+        donutsAmount: '300'
+    },
 ];
 
 const moviesListData = [
@@ -101,9 +132,15 @@ const CharacterBlock = styled(FlexBlock)`
     margin-bottom: 16px;
 `;
 
+const SubHeader = styled.div`
+    padding: 24px 0;
+`;
+
 const KidsApp = () => (
     <Container>
-        <p>Головна / Кабінет</p>
+        <SubHeader>
+            <p>Головна / Кабінет</p>
+        </SubHeader>
         <CharacterBlock>
             <Character />
             <CharacterTasks />
@@ -115,8 +152,8 @@ const KidsApp = () => (
         </FlexBlock>
 
         <FlexBlock padding="8px 0">
-            <ChallengeList title="Загальні Challenges" items={mainChallenges} align="24px" />
-            <ChallengeList title="Щоденні Challenges" items={dailyChallenges} />
+            <ChallengeList title="Загальні завдання" items={mainChallenges} marginRight="24px" />
+            <ChallengeList title="Щоденні завдання" items={dailyChallenges} />
         </FlexBlock>
 
 

@@ -6,4 +6,5 @@ export const FlexBlock = styled.div`
     flex-direction: ${props => (props.direction || 'row')};
     margin: ${props => (props.margin)};
     padding: ${props => (props.padding)};
+    flex-grow:  ${props => (props.grow)};
 `;

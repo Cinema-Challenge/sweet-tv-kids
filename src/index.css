@@ -24,3 +24,8 @@ code {
 .app-container {
   background: #0F1C26;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
