@@ -3,6 +3,7 @@ import ChildBox from "./children-box";
 import AvatarImg from "./Avatar.png";
 import AvatarGirl from "./Avatar-girl.png";
 import AddChildModal from "../child-modal/add-child-modal.component";
+import Awards from "../award/awards";
 
 export const localStorageKey = 'CHILDREN_DATA'
 
@@ -57,6 +58,10 @@ const Children = () => {
       </div>
       <button onClick={() => setIsOpen(true)} className="btn">Додати користувача</button>
       <AddChildModal isOpen={isModalOpen} closeModal={() => setIsOpen(false)}  />
+      <div className="children__award-container">
+          <h2 className="title">Останні нагороди</h2>
+          <Awards />
+      </div>
     </>
   );
 };
