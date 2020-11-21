@@ -7,4 +7,5 @@ export const FlexBlock = styled.div`
     margin: ${props => (props.margin)};
     padding: ${props => (props.padding)};
     flex-grow:  ${props => (props.grow)};
+    height:  ${props => (props.height)};
 `;

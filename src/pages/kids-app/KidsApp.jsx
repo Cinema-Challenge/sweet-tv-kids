@@ -2,8 +2,10 @@ import React from "react";
 import Character from '../../components/character/Character';
 import ChallengeList from './challenge-list/ChallengeList';
 import { FlexBlock } from '../../styled-components/FlexBlock';
+import { Block } from '../../styled-components/Block';
 import MoviesList from '../../components/movies-list/MoviesList';
 import { Container } from '../../styled-components/Container';
+import { Title } from '../../styled-components/Headline';
 import CharacterTasks from '../../components/character-tasks/CharacterTasks';
 import styled from 'styled-components';
 import FeaturesList from '../../components/features-history/FeatutesHistory';
@@ -136,6 +138,25 @@ const SubHeader = styled.div`
     padding: 24px 0;
 `;
 
+const AddBlock = styled(Block)`
+    height: 300px;
+    max-width: 400px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background: #0F1C26;
+    border: 2px solid #2EBEC5;
+
+
+    h1 {
+        transition: .3s;
+    }
+
+    :hover h1 {
+        color: #2EBEC5;
+    }
+`;
+
 const KidsApp = () => (
     <Container>
         <SubHeader>
@@ -156,10 +177,14 @@ const KidsApp = () => (
             <ChallengeList title="Щоденні завдання" items={dailyChallenges} />
         </FlexBlock>
 
-
-
         {moviesListData.map(list => <MoviesList title={list.title} items={list.items} />)}
         
+        <FlexBlock justify="center" align="center" margin="16px 0">
+            <AddBlock>
+                <Title>+ Додати список</Title>
+            </AddBlock>
+        </FlexBlock>
+
     </Container>
 )
 
