@@ -145,7 +145,6 @@ const AddBlock = styled(Block)`
     align-items: center;
     justify-content: center;
     background: #0F1C26;
-    border: 2px solid #2EBEC5;
 
 
     h1 {
@@ -179,7 +178,7 @@ const KidsApp = () => (
 
         {moviesListData.map(list => <MoviesList title={list.title} items={list.items} />)}
         
-        <FlexBlock justify="center" align="center" margin="16px 0">
+        <FlexBlock justify="center" align="center">
             <AddBlock>
                 <Title>+ Додати список</Title>
             </AddBlock>
