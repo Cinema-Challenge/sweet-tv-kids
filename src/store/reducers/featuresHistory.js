@@ -7,8 +7,10 @@ const initialState = {
 };
 
 export const featuresHistory = (state = initialState, action) => {
+    console.log('store .... ', state);
     switch (action.type) {
         case EARN_DONUTS:
+            console.log('store .... ', state);
             return {
                 ...state,
                 donuts: (state.donuts + action.payload.donuts),
@@ -21,7 +23,7 @@ export const featuresHistory = (state = initialState, action) => {
             return {
                 ...state,
                 donuts: (state.donuts - action.payload.donuts),
-                features: [...state.features, action.payload.features]
+                features: [...state.features, action.payload.feature]
             }
         default:
             return state;
