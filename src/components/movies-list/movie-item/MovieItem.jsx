@@ -27,16 +27,14 @@ const ImageContainer = styled.div`
     border-radius: 10px;
     overflow: hidden;
     transition: .5s;
+    margin-bottom: 8px;
 
     &:hover {
         border: 2px solid #20bec6;
     }
 `;
 
-const Image = styled.img.attrs({
-    // src: ${props => url(`${props.imgSrc}`)
-})`
-    
+const Image = styled.img`
     height: 100%;
     background: #000;
 `;
