@@ -30,8 +30,8 @@ const DonutsAmount = styled.span`
     margin-left: 8px;
 `;
 
-const ButtonDonut = ({text, donuts}) => (
-    <BtnDonut>
+const ButtonDonut = ({text, donuts, onClickFunc}) => (
+    <BtnDonut onClick={onClickFunc}>
         <span>{text}</span>
         <DonutsAmount>{donuts}</DonutsAmount>
         <ImgBlock>

@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import ButtonDonut from '../button-donut/ButtonDonut';
 import { FlexBlock } from '../../styled-components/FlexBlock';
 import { Headline } from '../../styled-components/Headline';
 import { BlueButton } from '../../styled-components/Button';
 import DonutsAmount from '../../components/donuts-amount/DonutsAmount';
-
 
 const CharacterBlock = styled(FlexBlock)`
     flex-direction: column;
@@ -32,23 +31,54 @@ const SecondButtonsBlock = styled(FlexBlock)`
     }
 `;
 
-const CharacterTasks = () => (
-    <CharacterBlock>
+const ButtonsList = [
+    {
+        text: "Змінити фон",
+        donuts: "200"
+    },
+    {
+        text: "Нова рамка",
+        donuts: "300"
+    },
+    {
+        text: "Анімація для персонажа",
+        donuts: "200"
+    },
+    {
+        text: "Шапка для персонажа",
+        donuts: "100"
+    },
+    {
+        text: "Змінити фон",
+        donuts: "200"
+    },
+    {
+        text: "Нова рамка",
+        donuts: "300"
+    },
+    {
+        text: "Анімація для персонажа",
+        donuts: "200"
+    },
+    {
+        text: "Шапка для персонажа",
+        donuts: "100"
+    },
+
+];
+
+const CharacterTasks = () => {
+    const [amount, setAmount] = useState(1000);
+
+    return(
+        <CharacterBlock>
         <FlexBlock>
             <Headline>Артем</Headline>
-            <DonutsAmount donuts="300" />
+            <DonutsAmount donuts={amount} />
         </FlexBlock>
         
         <ButtonsBlock>
-            <ButtonDonut text="Змінити фон" donuts="200" />
-            <ButtonDonut text="Нова рамка" donuts="200" />
-            <ButtonDonut text="Анімація для персонажа" donuts="200" />
-            <ButtonDonut text="Шапка для персонажа" donuts="200" />
-            <ButtonDonut text="Змінити фон" donuts="200" />
-            <ButtonDonut text="Нова рамка" donuts="200" />
-            <ButtonDonut text="Анімація для персонажа" donuts="200" />
-            <ButtonDonut text="Шапка для персонажа" donuts="200" />
-
+            {ButtonsList.map(item => <ButtonDonut {...item} onClickFunc={() => (amount >= item.donuts && setAmount(amount - item.donuts))} />)}
         </ButtonsBlock>
 
         <SecondButtonsBlock>
@@ -56,6 +86,6 @@ const CharacterTasks = () => (
             <BlueButton>Поділитися з друзями</BlueButton>
         </SecondButtonsBlock>
     </CharacterBlock>
-)
+)}
 
 export default CharacterTasks;

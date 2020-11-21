@@ -4,7 +4,7 @@ import { Title } from '../../styled-components/Headline';
 import MovieItem from './movie-item/MovieItem';
 
 const MoviesList = ({title, items}) => (
-    <FlexBlock direction="column" justify="center">
+    <FlexBlock padding="8px 0" direction="column" justify="center">
         <Title>{title}</Title>
         <FlexBlock>
             {items.map(movie => <MovieItem key={movie.title+movie.desc} {...movie} />)}
