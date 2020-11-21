@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: "*",
-    component: ChildDetails,
+    component: ParentCabinet,
   }
 ];
 

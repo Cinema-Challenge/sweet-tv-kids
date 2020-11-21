@@ -23,7 +23,7 @@ const Header = () => {
           </ul>
           <ul className="navigation__list navigation__list--right">
                 <li className="navigation__link"><SearchIcon /></li>
-                <li className="navigation__link"><MoonIcon /></li>
+                <Link to="/kids" className="navigation__link"><MoonIcon /></Link>
                 <li className="navigation__link">UK <ChevronDownIcon /></li>
                 <Link to="/profile" className="navigation__link"><ProfileIcon /> Кабінет</Link>
           </ul>
