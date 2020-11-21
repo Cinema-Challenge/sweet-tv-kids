@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
+  min-width: 200px;
   display: block;
   font-size: ${props => props.fz || '16px'};
+  margin: ${props => (props.margin)};
   padding: ${props => props.padding || '5px 10px'};
   color: #fff;
   border: 2px solid #20BEC6;
