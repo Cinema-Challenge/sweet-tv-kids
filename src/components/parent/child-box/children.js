@@ -4,10 +4,11 @@ import AvatarImg from "./Avatar.png";
 import AvatarGirl from "./Avatar-girl.png";
 import AddChildModal from "../child-modal/add-child-modal.component";
 import Awards from "../award/awards";
+import { Link } from "react-router-dom";
 
-export const localStorageKey = 'CHILDREN_DATA'
+export const localStorageKey = "CHILDREN_DATA";
 
-const childrenData = [
+export const childrenData = [
   {
     name: "Артем",
     age: "12 ",
@@ -39,26 +40,36 @@ const childrenData = [
 ];
 
 const Children = () => {
-  const [isModalOpen,setIsOpen] = useState(false);
+  const [isModalOpen, setIsOpen] = useState(false);
   const [children, setChildren] = useState(childrenData);
 
   useEffect(() => {
     const data = localStorage.getItem(localStorageKey);
-    if (data) setChildren([...children, JSON.parse(data)])
-  }, [])
+    if (data) setChildren([...children, JSON.parse(data)]);
+  }, []);
 
   return (
     <>
       <div className="children">
         {children.map((child) => (
-          <ChildBox key={`${child.name}--${child.age}`} child={child} />
+          <Link
+            key={`${child.name}--${child.age}`}
+            to={{ pathname: "/child-details", params: child}}
+            child={child}
+            params={child}
+            className="children__link"
+          >
+            <ChildBox child={child} />
+          </Link>
         ))}
       </div>
-      <button onClick={() => setIsOpen(true)} className="btn">Додати користувача</button>
-      <AddChildModal isOpen={isModalOpen} closeModal={() => setIsOpen(false)}  />
+      <button onClick={() => setIsOpen(true)} className="btn">
+        Додати користувача
+      </button>
+      <AddChildModal isOpen={isModalOpen} closeModal={() => setIsOpen(false)} />
       <div className="children__award-container">
-          <h2 className="title">Останні нагороди</h2>
-          <Awards />
+        <h2 className="title">Останні нагороди</h2>
+        <Awards />
       </div>
     </>
   );
