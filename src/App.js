@@ -5,6 +5,7 @@ import ParentsApp from './pages/parents-app/ParentsApp';
 import KidsApp from './pages/kids-app/KidsApp';
 import Footer from './components/footer/Footer';
 import ParentCabinet from "./components/parent/parent-cabinet.component";
+import ChildDetails from "./components/child-details/child-details";
 
 const routes = [
   {
@@ -16,8 +17,12 @@ const routes = [
     component: ParentCabinet,
   },
   {
+    path: "/child-detaitls",
+    component: ChildDetails,
+  },
+  {
     path: "*",
-    component: ParentCabinet,
+    component: ChildDetails,
   }
 ];
 

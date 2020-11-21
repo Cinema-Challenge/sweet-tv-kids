@@ -17,9 +17,9 @@ const DonutsAmountBlock = styled(FlexBlock)`
 `;
 
 const DonutsAmount = ({donuts}) => (
-    <DonutsAmountBlock>
-        <span>{donuts}</span>
-        <img src={imageSrc} alt="donuts" />
+    <DonutsAmountBlock className="donut">
+        <span className="donut__text">{donuts}</span>
+        <img src={imageSrc} alt="donuts" className="donut__img" />
     </DonutsAmountBlock>
 )
 
