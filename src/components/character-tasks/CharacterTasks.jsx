@@ -7,6 +7,7 @@ import { BlueButton } from '../../styled-components/Button';
 import DonutsAmount from '../../components/donuts-amount/DonutsAmount';
 import { useDispatch, useSelector } from "react-redux";
 import { spendDonuts } from '../../store/actions/spendDonuts';
+import ProgressBarBlock from '../progress-bar/ProgressBar';
 
 const CharacterBlock = styled(FlexBlock)`
     flex-direction: column;
@@ -75,10 +76,12 @@ const CharacterTasks = () => {
 
     return(
         <CharacterBlock>
-        <FlexBlock>
-            <Headline>Артем</Headline>
+        <FlexBlock align="center">
+            <Headline fz="60px">Артем</Headline>
             <DonutsAmount donuts={donuts} />
         </FlexBlock>
+
+        <ProgressBarBlock />
         
         <ButtonsBlock>
             {ButtonsList.map(item => <ButtonDonut {...item} onClickFunc={() => dispatch(spendDonuts(item.donuts, item.text))} />)}
