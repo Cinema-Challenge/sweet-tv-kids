@@ -39,7 +39,7 @@ const ChallengeItem = ({title, desc, donutsAmount}) => {
                 <Desc>{desc}</Desc>
             </FlexBlock>
 
-            <DonutsAmount donuts={donutsAmount} size="18px"/>
+            <DonutsAmount donuts={donutsAmount} donutSize="24px"/>
         </Item>
 )}
 
