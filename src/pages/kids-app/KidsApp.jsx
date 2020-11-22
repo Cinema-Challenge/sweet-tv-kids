@@ -1,6 +1,6 @@
 import React from "react";
 import Character from '../../components/character/Character';
-import ChallengeList from './challenge-list/ChallengeList';
+import ChallengeList from '../../components/challenge-list/ChallengeList';
 import { FlexBlock } from '../../styled-components/FlexBlock';
 import { Block } from '../../styled-components/Block';
 import MoviesList from '../../components/movies-list/MoviesList';
@@ -15,45 +15,45 @@ const mainChallenges = [
     {
         title: 'Поліглот',
         desc: 'Переглянути 5 стрічок англ мовою',
-        donutsAmount: '200'
+        donutsAmount: 200
     },
     {
         title: 'В десятку',
         desc: 'Пройти 10 тестів після перегляду стрічки',
-        donutsAmount: '300'
+        donutsAmount: 300
     },
     {
         title: 'Разом веселіше',
         desc: 'Запросити друга на сайт',
-        donutsAmount: '50'
+        donutsAmount: 50
     },
     {
         title: 'Популярність',
         desc: 'Розмістити посилання на свого героя в соцмережі',
-        donutsAmount: '100'
+        donutsAmount: 100
     }
 ];
 
 const dailyChallenges = [
     {
         title: 'Переглянути стрічку французською',
-        donutsAmount: '100'
+        donutsAmount: 100
     },
     {
         title: 'Історія: стрічка “Стів Джобс”',
-        donutsAmount: '80'
+        donutsAmount: 80
     },
     {
         title: 'Зробити домашнє завдання!',
-        donutsAmount: '50'
+        donutsAmount: 50
     },
     {
         title: 'Зробити зарядку',
-        donutsAmount: '200'
+        donutsAmount: 100
     },
     {
         title: 'Переглянути стрічку англійською',
-        donutsAmount: '300'
+        donutsAmount: 200
     },
 ];
 
@@ -105,7 +105,7 @@ const moviesListData = [
                 imgSrc: 'https://upload.wikimedia.org/wikipedia/ru/3/39/Shrek.jpg',
                 title: 'Шрек',
                 desc: 'Мультфільм'
-            },  
+            },
             {
                 imgSrc: 'https://lh3.googleusercontent.com/proxy/xWNWXGpTct6Ox8XcNYgqz0FZBEEkq95JyXwFns4LaQ7cNrrywzBaUWoH1zSTKQrbgk09WgYB7nWR7O4PLZZE3KTn4gR0862X6S3frIM-91G8-9p8idRSJ9FQ7Qd49lLytTuY1pXyjkq1AmZP05PngG0-NK8s7ipOtHj1Xl8H',
                 title: 'Жирафа',
